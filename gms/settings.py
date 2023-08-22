@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'gms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gsm',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',   # Change this to your DB host if not local
+        'PORT': '5432',        # Change this to your DB port if necessary
     }
 }
 
